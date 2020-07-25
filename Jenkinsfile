@@ -48,6 +48,7 @@ pipeline {
                      sh 'echo "Updating variables  completed"'
               }
            }
+       }
       
         stage('Deploy to kubernetes cluster') {
             agent {
