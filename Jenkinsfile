@@ -82,7 +82,7 @@ pipeline {
                }
 
           }
-           }
+        }
       }
     
     stage('Deploy') {
@@ -95,4 +95,4 @@ pipeline {
     }
   }
   
- }
+ 
