@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: test-deploy
+  name: postgres-credentials
+type: Opaque
+data:
+  POSTGRES_USER: d2Vic2l0ZV91c2Vy
+  POSTGRES_PASSWORD: cGFzcw==
+  POSTGRES_DB: d2Vic2l0ZQ==
+  
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
