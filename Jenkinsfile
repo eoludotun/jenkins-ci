@@ -17,8 +17,14 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls -a"
-                sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
+                //sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh 'docker build -t userservice:$BUILD_NUMBER .'
             }
+                  post {
+                always {
+                    sh 'echo "Docker build  completed"'
+                }
+           }
         }
 
     }
