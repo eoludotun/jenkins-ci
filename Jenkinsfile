@@ -1,9 +1,6 @@
 
 pipeline {
-      options {
-        buildDiscarder(logRotator(daysToKeepStr: '10'))
-        timestamps()
-    }
+
     agent any
     stages {
         stage('Build Application') {
@@ -50,9 +47,17 @@ pipeline {
             always {
                      sh 'echo "Updating variables  completed"'
                    }
-           }                           
+           }
+                          stage('Deploy') {
+      agent {
+                docker { image 'maven:3-alpine' }
+            } 
+      steps {
+        sh 'mvn --version'
+      }
+      }
             
-          }
+     }
 
-    }
+   }
 }
