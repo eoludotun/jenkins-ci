@@ -27,19 +27,18 @@ pipeline {
            }
         }
         
-                stage('Updating variables') {
+                stage('testing / unit') {
             agent {
                 label 'master'
             }
 
           steps {
-            
-              
+                      
               echo "*******************************************************************************"
               sh 'echo "before changing image in Deploy"'
+              echo "><><><><><> Pretent Unit test ><><><><><>><><><"
               sh 'cat application.yaml'
-              echo "*******************************************************************************"
-            
+              echo "*******************************************************************************"            
             
           }
             post {
