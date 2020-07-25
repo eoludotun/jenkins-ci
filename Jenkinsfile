@@ -1,3 +1,9 @@
+   options {
+        buildDiscarder(logRotator(daysToKeepStr: '10'))
+        timestamps()
+    }
+
+
 pipeline {
     agent any
     stages {
