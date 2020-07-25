@@ -33,13 +33,13 @@ pipeline {
             }
 
           steps {
-            dir('k8s/scripts') {
+            
               
               echo "*******************************************************************************"
               sh 'echo "before changing image in Deploy"'
               sh 'cat application.yaml'
               echo "*******************************************************************************"
-            }
+            
             
           }
             post {
