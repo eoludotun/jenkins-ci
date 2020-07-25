@@ -1,10 +1,9 @@
-   options {
+
+pipeline {
+      options {
         buildDiscarder(logRotator(daysToKeepStr: '10'))
         timestamps()
     }
-
-
-pipeline {
     agent any
     stages {
         stage('Build Application') {
