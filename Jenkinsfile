@@ -48,15 +48,7 @@ pipeline {
                      sh 'echo "Updating variables  completed"'
                    }
            }
-                          stage('Deploy') {
-      agent {
-                docker { image 'maven:3-alpine' }
-            } 
-      steps {
-        sh 'mvn --version'
-      }
-      }
-            
+      
      }
 
    }
