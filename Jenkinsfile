@@ -63,7 +63,7 @@ pipeline {
             //dir('k8s/scripts') {       
                //sh "sed -i 's|eoludotun/userservice:00|eoludotun/userservice:$BUILD_NUMBER|' application.yaml
               
-              sh "sed -i 's|POSTGRES_PASSWORD|${SECRET}|' application.yaml"
+              //sh "sed -i 's|POSTGRES_PASSWORD|${SECRET}|' application.yaml"
               //sh "sed -i 's|3|${AUTOSCALE}|' application.yaml"
               sh "sed -i 's|eoludotun/userservice:00|userservice:$BUILD_NUMBER|' application.yaml"
              
