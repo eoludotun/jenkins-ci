@@ -26,6 +26,29 @@ pipeline {
                 }
            }
         }
+        
+                stage('Updating variables') {
+            agent {
+                label 'master'
+            }
+
+          steps {
+            dir('k8s/scripts') {
+              
+              echo "*******************************************************************************"
+              sh 'echo "before changing image in Deploy"'
+              sh 'cat application.yaml'
+              echo "*******************************************************************************"
+            }
+            
+          }
+            post {
+            always {
+                     sh 'echo "Updating variables  completed"'
+                   }
+           }                           
+            
+          }
 
     }
 }
