@@ -79,9 +79,7 @@ pipeline {
                 //sh "kubectl --kubeconfig $KUBECONFIG get deployments -n ${params.NameSpace} -o wide"
                 echo "*******************************************************************************"
                   
-               }
-
-          }
+            }
         }
       }
     
